@@ -34,14 +34,21 @@ function addNumbers(num1, num2) {
  * passing 5, 'Leia' and 'leia@leia.com' as arguments,
  * the returned value should look like:
  * {
+ *
  *   id: 5,
  *   name: "Leia",
  *   email: "leia@leia.com",
  * }
 */
-function makePersonObject(/* code here */) {
-  /* code here */
-}
+function makePersonObject(id, name, email) {
+  return{
+  id:id,
+  name:name,
+  email:email
+    }
+  }
+
+  let myObj = makePersonObject(5, 'Leia', 'Leia@Leia.com');
 
 /**
  * ### Challenge `getName`
@@ -56,9 +63,15 @@ function makePersonObject(/* code here */) {
  * passing { id: 1, name: 'Leia', email: 'leia@leia.com` } as the argument,
  * the returned value should look like `Hello, my name is Leia`.
 */
-function getName(/* code here */) {
-  /* code here */
+
+
+
+function getName(obj) {
+  return `Hello, my name is ${obj.name}`;
+ 
 }
+
+ getName(myObj);
 
 /**
  * ### Challenge `makeSmartPerson`
@@ -73,9 +86,20 @@ function getName(/* code here */) {
  *         and returns a string like `Hello, my name is {name}`.
  *         where `{name}` is the name passed into `makeSmartPerson`.
 */
-function makeSmartPerson(/* code here */) {
-  /* code here */
-}
+function makeSmartPerson(name) {
+   /* code here */
+  return {
+    name: name,
+    sum: function(num1, num2){
+      return num1 + num2;
+    },
+    speak: function(){
+      return `Hello, my name is ${this.name}`;
+    }
+
+  }; 
+
+};
 
 
 
@@ -135,8 +159,17 @@ function get3rdCar(inventory) {
  * For example, if getCarInfoByIndex is invoked with the inventory and the number 0,
  * it will return `This is a Lincoln Navigator`.
 */
+var inventory = [
+  { id: 1, car_make: "Lincoln", car_model: "Navigator", car_year: 2009 }
+];
+
+
 function getCarInfoByIndex(inventory, index) {
   /* code here */
+ return `this is a ${inventory[index].car_make} ${inventory[index].car_model}`;
+
+
+
 }
 
 /**
@@ -152,6 +185,8 @@ function getCarInfoByIndex(inventory, index) {
 */
 function getLastCarInfo(/* code here */) {
   /* code here */
+return `this is a ${inventory[inventory.length-1].car_make}${inventory[inventory.length-1].car_model}`;
+
 }
 
 /**
