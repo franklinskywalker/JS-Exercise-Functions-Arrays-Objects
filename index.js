@@ -185,7 +185,7 @@ function getCarInfoByIndex(inventory, index) {
 */
 function getLastCarInfo(/* code here */) {
   /* code here */
-return `this is a ${inventory[inventory.length-1].car_make}${inventory[inventory.length-1].car_model}`;
+return `this is a ${inventory[inventory.length-1].car_make} ${inventory[inventory.length-1].car_model}`;
 
 }
 
@@ -203,6 +203,10 @@ return `this is a ${inventory[inventory.length-1].car_make}${inventory[inventory
 */
 function getCarInfoById(/* code here */) {
   /* code here */
+  return 
+   
+
+
 }
 
 /**
@@ -279,9 +283,16 @@ function getGermanCars(/* code here */) {
  *   return num * 2
  * }
 */
-const sum = null; // code here!
-const addFive = null; // code here!
-const argTimesTwo = null; // code here!
+const sum = (num1, num2) => {
+         return num1 + num2;
+}
+
+const addFive = (num) => {
+  return num + 5;
+}
+const argTimesTwo = (num) => {
+  return num * 2;
+}
 
 /**
  * ### Challenge `carMaker`
